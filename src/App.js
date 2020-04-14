@@ -103,27 +103,24 @@ function Graph(){
   ];
   return (
     
-		<div>
+		<div className = "graph">
       <Slider onChange = {onChange}/>
       <br/>
       <form className = "my-form" onSubmit = {onSubmit}>
-        <div  className = "form-group">
-          <label><strong>Height</strong> <span className = "info">(Please enter positive number less than 5000)</span></label>
+          <label><strong>Height</strong><br/><span className = "info">(Please enter positive number less than 5000)</span></label>
           <input type = "number" min="1" max="50000" value ={height} onChange = {e=>setHeight(e.target.value)}/>   
-        </div>
-        <div  className = "form-group">
+  
           <label>Planet</label>
           <Select className="basic-single"
           classNamePrefix="select" onChange={(e)=>setG(e.value)} defaultValue={options[1]} options={options} />
-        </div>
-        <button className ="btn">Make Graph</button>
+
       </form>
       
       <LineChart 
           onPointClick = {(event,point)=>console.log(point)}
           yMin = '0'
-          xLabel = "Time"
-          yLabel = "Height"
+          xLabel = "Time (in sec)"
+          yLabel = "Height (in metre)"
           // width={600}
           height={400}
           data={data}

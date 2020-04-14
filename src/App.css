@@ -1,3 +1,7 @@
+:root {
+  --box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
 body{
   display: flex;
   align-items: start;
@@ -10,6 +14,9 @@ h4{
   margin-bottom: 0;
   color:rgb(56, green, blue)
 }
+h1{
+  color:#001f3f;
+}
 .container {
   margin: 0;
   min-width: 80%;
@@ -17,29 +24,32 @@ h4{
 .canvasjs-chart-canvas{
   width: 455px !important;;
 }
+.graph{
+  padding: 50px 10px;
+  box-shadow: var(--box-shadow);
+}
 .my-form{
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-content: center;
+  flex-flow: row wrap;
+  align-items: center;
 }
 
-label{
+.my-form label{
   color:#333;
-  /* padding: 15px 0; */
-  
+  margin: 5px 10px 5px;
+  font-weight: bold;  
 }
 input[type="number"]{
-  width :100%;
-  padding :10px 10px;
-  margin:15px 0;
-  font-size: 14px;
-  border: 0;
+  vertical-align: middle;
+  margin: 5px 10px 5px 0;
+  padding: 10px;
+  width: 20%;
 }
 .basic-single
 {
-  margin:10px 0;
-  width: 300%;
+  margin: 5px 10px 5px 0;
+  padding: 10px;
+  width:20%
   
 }
 .info{
